@@ -4,18 +4,17 @@
 int main () {
     int a = 10;
     int b = 20;
-    int *pa , *pb;
 
-    *pa = &a;
-    *pb = &b;
+    int *pa = &a;
+    int *pb = &b;
 
-    puts("Insira um número :");
-    scanf("%d" , &a);
+    printf("Antes da troca A : %d\n" , *pa);
+    printf("Antes da troca B : %d\n\n" , *pb);
 
-    puts("Insira outro número :");
-    scanf("%d" , &b);
+    *pa = *pa + *pb;
+    *pb = *pa - *pb;
+    *pa = *pa - *pb;
 
-    printf("Antes da troca : %d" , *pa);
-    printf("Antes da troca : %d" , *pb);
-
+    printf("Depois da troca A : %d\n" , *pa);
+    printf("Depois da troca B : %d\n" , *pb);
 }
